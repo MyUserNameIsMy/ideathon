@@ -1,1 +1,26 @@
-<p>dashboard works!</p>
+<div class="background">
+  <div class="pt-8 mx-8">
+    <p-inputGroup>
+      <button type="button" pButton label="Search"></button>
+      <input type="text" pInputText placeholder="What country or data to search" />
+      <button type="button" severity="help" pButton label="Upload"></button>
+    </p-inputGroup>
+  </div>
+
+  <div class="flex flex-column px-8 mx-8">
+    <div class="w-full flex justify-content-around">
+      <div class="w-30rem">
+        <p-chart type="bar" [data]="data" [options]="options" />
+      </div>
+      <div class="w-15rem">
+        <p-chart type="pie" [data]="data1" [options]="options1" />
+      </div>
+    </div>
+
+    <div class="w-full h-5rem">
+      <p-chart type="line" [data]="data2" [options]="options2" />
+    </div>
+
+  </div>
+
+</div>

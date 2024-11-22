@@ -22,7 +22,7 @@ import {HttpClient} from '@angular/common/http';
   styleUrl: './chat.component.scss'
 })
 export class ChatComponent implements OnInit, AfterViewChecked {
-  BASE_URL = 'http://localhost:3000';
+  BASE_URL = 'https://api.turkalingo.com';
 
   shouldScroll: boolean = false;
   @ViewChild('scrollPanel') scrollPanel!: ScrollPanel;
