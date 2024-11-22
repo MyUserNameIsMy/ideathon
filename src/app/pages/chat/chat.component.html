@@ -1,0 +1,38 @@
+<div class="background flex flex-column align-items-center">
+  <h1> Ideathon Bot</h1>
+  <div class="bg-white xl:w-6 w-full h-30rem">
+    <p-scrollPanel #scrollPanel [style]="{scrollBehavior: 'smooth', width: '100%', height: '90%' }" >
+      @for(item of messages(); track item) {
+        @if(item.role === 'Assistant') {
+          <div class="flex flex-column p-3 ">
+            <h4>{{item.role}}</h4>
+            <p>{{item.message}}</p>
+          </div>
+        } @else {
+          <div class="flex flex-column p-3 align-items-end">
+            <h4>{{item.role}}</h4>
+            <p>{{item.message}}</p>
+          </div>
+        }
+
+      }
+    </p-scrollPanel>
+  </div>
+  <div class="bg-white xl:w-6 w-full flex align-items-center border-round-bottom-2xl p-2">
+    <div class="flex-grow-1">
+      <p-floatLabel>
+    <textarea
+      id="float-input"
+      rows="5"
+      pInputTextarea
+      class="p-fluid w-full" [(ngModel)]="message">
+    </textarea>
+        <label for="float-input">Message</label>
+      </p-floatLabel>
+    </div>
+    <div class="flex justify-content-center w-4rem ">
+      <p-button severity="info" icon="pi pi-send" [rounded]="true" (onClick)="onsubmit()"></p-button>
+    </div>
+  </div>
+
+</div>

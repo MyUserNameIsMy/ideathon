@@ -1,0 +1,9 @@
+.chat {
+  height: 50vh;
+}
+
+@media (max-width: 480px) {
+  .chat {
+    height: 60vh;
+  }
+}
